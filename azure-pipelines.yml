@@ -9,8 +9,8 @@ trigger:
 pool:
   vmImage: ubuntu-latest
   
-container: ubuntu:18.04  
-steps:
+# container: ubuntu:18.04  
+# steps:
 #- task: Maven@3
 #  inputs:
 #    mavenPomFile: 'pom.xml'
@@ -22,4 +22,10 @@ steps:
 #    testResultsFiles: '**/surefire-reports/TEST-*.xml'
 #    goals: 'package'
 
-- script: printenv
+# - script: printenv
+container:
+  image: dbaas.docker.repositories.sap.ondemand.com/com.sap.hana.dbaas.delivery/haas-jenkins-lib:cli
+  endpoint: dbaas
+
+steps:
+- script: --command hello
