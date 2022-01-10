@@ -9,23 +9,14 @@ trigger:
 pool:
   vmImage: ubuntu-latest
   
-# container: ubuntu:18.04  
-# steps:
-#- task: Maven@3
-#  inputs:
-#    mavenPomFile: 'pom.xml'
-#    mavenOptions: '-Xmx3072m'
-#    javaHomeOption: 'JDKVersion'
-#    jdkVersionOption: '1.8'
-#    jdkArchitectureOption: 'x64'
-#    publishJUnitResults: true
-#    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-#    goals: 'package'
-
-# - script: printenv
-container:
-  image: dbaas.docker.repositories.sap.ondemand.com/com.sap.hana.dbaas.delivery/haas-jenkins-lib:cli
-  endpoint: dbaas
+container: ubuntu:18.04  
 steps:
+- script: printenv
+
+#container:
+#  image: dbaas.docker.repositories.sap.ondemand.com/com.sap.hana.dbaas.delivery/haas-jenkins-lib:cli
+#  endpoint: dbaas
+#  options: 
+#steps:
 # - script: groovy -cp src ./src/haas/microdelivery/cli/Cli.groovy --command hello
-- script: echo hello
+#- script: echo hello
