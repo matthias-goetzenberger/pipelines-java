@@ -26,6 +26,6 @@ pool:
 container:
   image: dbaas.docker.repositories.sap.ondemand.com/com.sap.hana.dbaas.delivery/haas-jenkins-lib:cli
   endpoint: dbaas
-
 steps:
-- script:  groovy -cp src ./src/haas/microdelivery/cli/Cli.groovy --command hello
+# - script: groovy -cp src ./src/haas/microdelivery/cli/Cli.groovy --command hello
+- script: echo hello
