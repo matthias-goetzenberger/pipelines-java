@@ -28,4 +28,4 @@ container:
   endpoint: dbaas
 
 steps:
-- script: --command hello
+- script:  groovy -cp src ./src/haas/microdelivery/cli/Cli.groovy --command hello
