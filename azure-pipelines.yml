@@ -14,7 +14,7 @@ pool:
 #- script: printenv
 
 container:
- image: dbaas.docker.repositories.sap.ondemand.com/com.sap.hana.dbaas.delivery/haas-jenkins-lib:cli
+ image: dbaas.docker.repositories.sap.ondemand.com/com.sap.hana.dbaas.delivery/haas-jenkins-lib:cli-stayup
  endpoint: dbaas
 steps:
 - script: groovy -cp src ./src/haas/microdelivery/cli/Cli.groovy --command hello
