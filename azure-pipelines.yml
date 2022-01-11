@@ -9,13 +9,13 @@ trigger:
 pool:
   vmImage: ubuntu-latest
   
-#container: ubuntu:18.04  
-#steps:
-#- script: printenv
-
-container:
- image: dbaas.docker.repositories.sap.ondemand.com/com.sap.hana.dbaas.delivery/haas-jenkins-lib:cli-stayup
- endpoint: dbaas
+container: ubuntu:18.04  
 steps:
-- script: groovy -cp /root/scripts/src /root/scripts/src/haas/microdelivery/cli/Cli.groovy --command hello
+- script: printenv
+
+#container:
+# image: dbaas.docker.repositories.sap.ondemand.com/com.sap.hana.dbaas.delivery/haas-jenkins-lib:cli-stayup
+# endpoint: dbaas
+#steps:
+#- script: groovy -cp /root/scripts/src /root/scripts/src/haas/microdelivery/cli/Cli.groovy --command hello
 #- script: echo hello
