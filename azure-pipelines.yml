@@ -9,7 +9,7 @@ jobs:
     vmImage: 'ubuntu-latest'
   steps:
   - task: Docker@2
-    displayName: Login to ACR
+    displayName: Login to dbaas
     inputs:
       command: login
       containerRegistry: dbaas
